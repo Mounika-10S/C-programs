@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("Enter the number");
+    scanf("%d",&n);
+    int x,y;
+    printf("Enter x and y values");
+    scanf("%d%d",&x,&y);
+    int temp,sum=0,r=1;
+    while(n>0)
+    {
+        temp=n%10;
+        if(temp==x)
+        {
+            temp=y;
+        }
+        sum=sum+temp*r;
+        r=r*10;
+        n=n/10;
+    }
+    printf("%d",sum);
+}
