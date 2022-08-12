@@ -1,0 +1,9 @@
+int arrangeCoins(long int n){
+    long int k=0;
+    for(int i=1;;i++){
+        k+=i;
+        if(n<k){
+            return i-1;
+        }
+    }
+}
