@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include<string.h>
+int main() {
+    char x,str[50];
+    int cnt=0,cnt1=0,cnt2=0;
+    gets(str);
+    int n=strlen(str);
+    for(int i=0;i<=n;i++){
+    if(isupper(str[i])){
+    cnt++;}
+    else
+    if(islower(str[i])){
+        cnt1++;
+    }
+    else 
+    if(isdigit(str[i]))
+    {cnt2++;}
+    }
+    printf("the lower case are:%d\n",cnt1);
+    printf("the upper case are:%d\n",cnt);
+    printf("the digits are:%d\n",cnt2);
+    return 0;
+}
