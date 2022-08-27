@@ -1,0 +1,41 @@
+#include <stdio.h>  
+#include <string.h>  
+int main ()  
+{  
+    char S1[10], S2[10];  
+    int len1, len2, num, i, j, found = 0, not_found = 0;  
+      
+    printf (" Enter the first string");  
+    scanf ("%s", S1);  
+      
+    printf (" Enter the second string");  
+    scanf ("%s", S2);  
+    len1 = strlen (S1);  
+    len2 = strlen (S2);  
+    if (len1 == len2)  
+    {  
+        num = len1;   
+        for ( i = 0; i < num; i++)  
+    {  
+        found = 0;  
+        for ( j = 0; j < num; j++)  
+        {
+        if (S1[i] == S2[j])  
+        {  
+        found = 1;  
+        break;  
+    }  
+        }  
+        if (found == 0)  
+        {  
+        not_found = 1;
+        break;  
+        }  
+    }  
+    if (not_found == 1)  
+    printf (" \n Not anagram ");  
+    else  
+    printf (" \n Anagram ");     
+    return 0;     
+} 
+}
