@@ -1,0 +1,19 @@
+#include <stdio.h>
+char*odd_even(int i);
+int main()
+{
+   int num;
+   printf("Enter i ");
+   scanf("%d", &num);
+   printf("Result : %s",odd_even(num));
+   return 0;
+}
+char*odd_even(int num)
+{
+  if (num%2 == 0){
+      return " EVEN ";
+   }else
+   {
+      return " ODD ";
+   }
+}
